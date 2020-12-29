@@ -1,0 +1,1098 @@
+1.复合语句的定界符是（ B ）。
+(A)   [ ]   (B)  {  }  (C)  (  )  (D)   /* */
+2.下列叙述错误的是（  C）。
+(A)  注释行可单独占用一行，也可跟在语句的后面
+(B)  注释部分可增加程序的可读性
+(C)  注释部分的定界符是\* *\
+(D)  注释部分在可执行程序中不存在
+3.下列叙述正确的是（ A ）。
+(A)  所有语句都必须以分号";"结束   (B)  构成C源程序的基本单位是语句
+(C)  main()函数只能位于源程序开头  (D)  所有函数名都可以由用户命名
+4.使用下列的（   B ），可以将C源程序转换成以二进制形式表示的目标程序。
+(A) 汇编程序        (B) 编译程序        (C) 解释程序        (D) 编辑程序
+5.下列叙述错误的是（  B   ）。
+(A)  C语言是一种支持结构化程序设计的语言        
+(B)  算法的概念与程序的概念相同        
+(C)  结构化程序设计所选用的控制结构只准许一个入口和一个出口        
+(D)  描述一个算法常见的三种方式是自然语言、流程图和伪代码
+6.下列叙述错误的是（ D ）。
+(A)  一个C源程序可由一个或多个函数组成
+(B)  一条语句可分多行书写
+(C)   C源程序必须包含一个且只能有一个main()函数
+(D)  多条语句不能书写在同一行
+7. 下列关于定界符"{}"叙述错误的是（B  ）。
+(A)  可作为函数体的定界符
+(B)  不一定要成对出现
+(C)  可作为复合语句的定界符
+(D)  可多层嵌套使用
+
+一、基本数据类型及运算
+1.C语言的下列运算符中，优先级最高的运算符是（A  ）。
+(A)  ++   (B)  +=   (C)  ||   (D)  !=
+2.C语言的基本数据类型包括（ B ）。
+(A)  整型、浮点型、数组型       (B)  整型、浮点型、字符型
+(C)  整型、字符型、结构体类型   (D)  整型、浮点型、指针型
+3.下列不合法的实型常量是（C  ）。
+(A)  2.3f   (B)  1e-2  (C)  10e0.3  (D)  3.14e2
+4.下列不合法的字符常量是（ D ）。
+(A)   'A'   (B)   'a'   (C)   '3'   (D)   "n"
+5.下列不合法的自定义标识符是（A  ）。
+(A)   int   (B)   a    (C)  a3   (D)   b_1
+6.下列不合法的整型常量是（ B ）。
+(A)  0xA3  (B)   082  (C)   1000L  (D)  46
+7.‘A'的ASCII码的十进制值为65, ’0’的ASCII码的十进制值为48，则以下程序运行结果是（A  ）。
+main()
+{ char ch1,ch2;
+  ch1='A'+'5'-'3';
+  ch2='A'+'6'-'3';
+  printf("%d,%c\n",ch1,ch2);
+}
+(A)   67,D  (B)   C,D  (C)   C,68  (D)   67,68
+8.下列语句错误的是（C  ）。
+(A)  int a,b;     (B)  char c=65;
+(C)  int m=n=1;   (D)  char s[]="hello!";
+9.若已定义：float a,b;下列表达式错误的是（ B ）。
+(A)  a+=b+5  (B)   a+b=5
+(C)  a=b=1  (D)  a= 'P'+2.0
+10.若已定义int a=3,b=4,c=5; 表达式a>b?a+c:b+c的值是（D  ）。
+(A)   3   (B)   4  (C)   8  (D)   9
+11.在C语言中，可以用（  C    ）表示整型常量。
+(A) 二进制、八进制、十进制    (B) 任意进制
+(C) 八进制、十进制、十六进制  (D) 二进制、八进制、十六进制
+12.参加逻辑运算的两个操作数（   B  ）。
+(A) 只能是字符’T’或’F’   (B) 可以是字符型、整型或浮点型
+(C) 只能是0或1       (D) 只能是0或非0整数
+13.若已定义int a=-2,b=4;表达式a*=b+1的值是（B  ）。
+(A)   -11  (B)   -10   (C)  -7  (D)  -6
+14.若已定义：char ch; 则正确的赋值语句是（  D   ）。
+(A) ch=”C”;	 (B) ch=”67”;   (C) ch=C;	  (D) ch=’C’;
+15.若已定义：int a=5,b; 则语句b=a++; b=a+1; 执行后b的值为（ D    ）。
+(A) 6		(B) 8		(C) 5		(D) 7
+16.若已定义：int a=10,b=20,c=30; 表达式(++a)+b%c的值是（D  ）。
+(A)  10     (B)  11   (C)  30   (D)   31 
+17.下列能正确表示x属于区间[-1,1]的逻辑表达式是（ C    ）。
+(A) -1<=x<=1			(B). x>=-1||x<=1
+(C) x>=-1&&x<=1			(D) 1>=x>=-1
+18.表达式：rand()%10/10.0可以产生（  D    ）。
+(A) 0到9之间的随机数				(B) 0到0.09之间的随机数
+(C) 0到99之间的随机数				(D) 0到0.9之间的随机数
+19.若已定义：int x,y; 能判断x,y两变量值为异号数的逻辑表达式是（    B  ）。
+(A) x>0||y<0	(B) x<0&&y>0  (C) x*y<0	  (D) x+y<0
+20.若已定义：int a=1,b=2,c=3; 则下列表达式值为0的是（  D   ）。
+(A). a>b||a&&c			(B) a<=b
+(C) ‘a’||’b’		(D) !(a<b&&c)
+21.要使以下程序运行后的输出结果为：12+345=357，正确的输入为（ B    ）。
+#include <stdio.h>
+int main()
+{	int x,y;
+ 	char ch;
+ 	scanf(“%d%c%d”,&x,&ch,&y);
+ 	printf(“%d%c%d=%d\n”,x,ch,y,x+y);
+}
+(A) 12=+345		(B) 12+345		(C) 12+=345		(D) 12,345
+22. 以下程序段运行后的输出结果是（  B   ）。
+int a,b;
+printf(“%d\n”,(a=1,b=2,a+b));
+(A) 1			(B) 3 		(C) 4			(D) 2
+23. 若已定义：int a,double x; 变量a和x能正确获取键盘输入值得语句是（ B    ）。
+(A) scanf(“%d%lf”,a,x);
+(B) scanf(“%d%lf”,&a,&x);
+(C) sacnf(“%d%f”,&a,x);
+(D) scanf(“%d%f”,a,&x);
+24. 以下程序段运行后，c的值是（ B   ）。
+int a=2,b=3,c;
+c=(a^b)<<2;
+(A) 11		(B) 4		(C) 12		(D) 3
+25. 以下程序段运行后，c的值是（  D  ）。
+int a=7,b=10,c;
+c=a&(b>>2);
+(A) 5        (B) 10       (C) 1         (D) 2
+26. 若已定义：int a=10,b=20,c=30; 表达式(++a)+b%c的值是（ D ）。
+(A)  10      (B)  11      (C)  30       (D)  31 
+27. 能正确表示变量x不属于区间[-3,5]的是（D  ）。
+(A)  5<=x<=-3         (B)   x>=-3 && x<=5
+(C)   x>=-3||x<=5     (D)   x<-3||x>5
+28. 以下程序的运行结果是（ C ）。
+  #include<stdio.h>
+  #include<conio.h>
+  int main()
+  {
+    char a=97,c='A';
+    printf("%c-%c=%d\n",a,c,a-c);
+    getch( );
+    return 0;
+  }
+(A)   A-A=0     (B)   97-A=97    (C)  a-A=32   (D)   97-A=32
+29. 要使用以下程序段给变量a,b,c分别赋值’a’, ’b’, ’c’，正确的输入格式是（C  ）。
+  char a,b,c;
+  scanf("%c%c%c",&a,&b,&c);
+(A)   a b c    (B) a,b,c      (C)  abc    (D)  'a' 'b' 'c'
+30. 若已定义: int a=3,b=2,c=1; 表达式(int)5.8%a+b/4+(c++)的值为（B  ）。
+(A)   4   (B)  3   (C)   3.5   (D)  4.5
+31. 算术运算符"/"按运算对象的个数属于（ B ）。
+(A)  单目运算符    (B)  双目运算符        
+(C)  三目运算符    (D)  四目运算符
+32. 以下程序段的运行结果是（ A ）·
+  int a=6,b=5,c;
+  c=(a>>1)|(b<<1);
+  printf("a=%d,b=%d,c=%d\n",a,b,c);
+(A)  a=6,b=5,c=11     (B)   a=3,b=5,c=11   
+(C)  a=3,b=10,c=13    (D)   a=3,b=5,c=5
+33. 以下程序段运行后，变量a,b,c的值分别是（A  ）。
+  int a,b=4,c=5;
+  a=b&c;
+(A)   4,4,5       (B)   5,4,5    (C)   5,4,4   (D)   5,5,5
+34. （ D）为正确的用户标识符。
+(A)   break        (B)  6name   (C)    _$8     (D)  _if 
+35. （ B ）属于构造数据类型。
+(A)  实型     (B)  结构体类型   (C)  字符型 (D)  整型
+36. （ B ）为合法的常量。
+(A)  "abc”  (B)   E-5   (C)   3.14E-2.5  (D)   'm10'
+37. 在对无符号数的位运算中，操作数右移三位相当于（ C ）。
+(A)  操作数除以6  (B)  操作数乘以6  (C)  操作数除以8 (D)  操作数乘以8
+38. （  A）不是数据类型关键字。
+(A)  Double   (B)  int     (C)  float   (D)  char
+39. 若已定义：int k,m,n;执行语句k=(m=5,n=--m);后k ，m和n的值分别为（ D ）。
+(A)   5,4,4   (B)   4,5,4  (C)   5,5,4  (D)   4,4,4
+40. 下列定义变量的语句，正确的是(B )。
+(A)  double x=3.14,int x,y=18;    (B)  int x=1,y,z=2;
+(C)  int x=0;y=1;z=2;             (D)  int x,y=z=2;
+41. 若已定义int a,b; 执行语句a=(b=1,b-2);后a和b的值分别为（A  ）。
+(A)  -1, 1   (B)  -1, -2   (C)  1, -2   (D)  1, -1
+42. （  ）是错误的语句。
+(A)  int i=j=1;      (B)  char c=49;
+(C)  double a=5.0,b; (D)  char s[]="hello!";
+43. 下列叙述正确的是（ B ）。
+(A)  表达式（int)5.0/6 与表达式 5/6的值相同
+(B)  表达式’a’+1的值与表达式b'的值不同
+(C)  表达式5/6与表达式5.0/6.0的值相亭
+(D)  表达式'a'++合法
+44. 下列叙述错误的是（ D ）。
+(A)  表达式(!(1&&-1))的值为0
+(B)  表达式(1>0?1:-1)的值为1
+(C)  关系运算符的优先级低于算术运算符
+(D)  模运算符"%"可以适用于实型操作数
+45. 下列叙述正确的是（ C ）。
+(A)  表达式"m"+"M" 是合法的
+(B)  若变量a, b为整型，则 (a+b)++是合法的
+(C)  逗号运算符","的优先级低于赋值运算符"="
+(D)  表达式'm'+'n'是不合法的
+46. 若已定义：int i=2,j=3;  表达式(++j)*(i++) 的值为（ B ）。
+(A)   6   (B)   8   (C)   9   (D)   12 
+47. 在进行逻辑运算时，若操作数为（A  ），则以"假"参加逻辑运算。
+(A)   0     
+(B)  大于0的数    
+(C)  小于0的数    
+(D)  非0的数
+48. 函数putchar(getchar()) 的功能是向终端输出（  A）。
+(A)  从键盘输入的一个字符
+(B)  从键盘输入的多个字符
+(C)  从键盘输入的一个算术表达式的值
+(D)  从键盘输入的一个关系表达式的值
+49. 若已定义int x=1,y=2,z; 语句z=(x!=y); 执行后z的值为（A  ）。
+(A)   1    (B)   2   (C)   0   (D)  -1
+50. 若已定义int a=0,b=1; 表达式值为假的是（ A ）。
+(A)  a==b   (B)  a!=b   (C)  a||b   (D)  !a
+51. 若已定义int a=10;double b=3.5;char c=’B’.则表达式c/a+b-(float)a结果的类型是（   C ）
+(A)   long    (B)  int  (C)  double  (D)  char
+52. 优先级最低的运算符是（  A）。
+(A)   =   (B)  &&   (C)   +   (D)  !=
+53. 若已定义int x=2,y=3; 下列表达式与(x+y)*3/2.0计算结果相等的是（B  ）。
+(A)  (x+y)*3/2          (B)  3/2.0 *(x+y)
+(C)  (1/2)*(x+y)*3      (D)  (x+y)*3/1*2.0
+54. 若已定义：int a=2,b=7,m=4,n=5;  语句(m=a>b) && (n=a++); 运行后m,n的值分别是（ B ）。
+(A)   0   2   (B)   0   5  (C)   1   2   (D)   1   3
+55. scanf( )函数中，用于读取字符串的格式控制符是（ B ）。
+(A)  "%d”  (B)  "%s"  (C)  "%c"   (D)   "%f"    
+
+二、控制结构
+1.在结构化程序设计中，使用的三种基本控制结构是（   D     ）。
+(A) 顺序结构 、循环结构和嵌套结构     (B) 选择结构 、循环结构和函数结构
+(C) 顺序结构 、选择结构和文件结构     (D) 顺序结构 、选择结构和循环结构
+2.以下程序运行后a的值是（ C ）.
+main()
+{ int a,b;
+  for(a=1,b=1;a<=100;a++)
+  {
+    if(b>=20) break;
+    if(b%3==1) { b+=3; continue; }
+    b-=5;
+  }
+}
+(A)   101  (B)   100   (C)   8   (D)   7
+3. 以下程序运行后的输出结果是（   D   ）。
+#include<stdio.h>
+int main()
+{ 	
+int m.n=1,t=1;
+if(t!=1) t=-t;
+else m=(n>=0?6:3);
+printf("%d\n",m);
+return 0;
+}
+(A) -1     (B) 0      (C) 3      (D) 6
+4. 以下程序运行后的输出结果是（  A      ）。
+#include<stdio.h>
+int main()
+{  
+int a=5;
+if(a++>5)printf("%d\n",a);
+else printf("%d\n",a++)
+return 0;
+}
+(A)   6    (B)  7     (C)  5     (D)  4
+5. 有以下程序:
+main()
+{ int c;
+  while((c=getchar())!= '\n')
+  { switch(c-'2')
+    { case 0 :
+      case 1 : putchar(c+4);
+      case 2 : putchar(c+4); break;
+      case 3 : putchar(c+3);
+      default: putchar(c+2); break;
+    }
+  }
+  printf("\n");
+}
+当输入：247↙回车，程序的输出结果是（ B ）。
+(A)   689   (B)  6689  (C)   66778  (D)   66887
+6. 若已定义： int a=5,b=3; 以下程序运行后的输出结果是（ A    ）。
+if(a>b)
+a=b;
+b=a;
+else
+a++;
+b++;
+printf("%d,%d\n",a,b);
+A  无法运行      B    3.3   C  3.3           D    6.4
+7. 在嵌套的if…else语句中，有关else描述正确的是（ D ）·
+(A)  不能出现在循环语句中
+(B)  可以单独出现，不需要与if配对
+(C)  与缩进位置相同的if配对
+(D)  与其之前最近的if配对
+8. 下列关于do…while语句与while语句描述正确的是（  B）。
+(A)  while语句中的循环体至少无条件执行一次，do…while语句中的循环体可能都不执行
+(B)  do…while语句中的循环体至少无条件执行一次, while语句中的循环体可能都不执行
+(C)  do…while语句中的循环体可使用break语句, while语句中的循环体不允许出现break语句
+(D) do…while语句适用于循环次数已知的场合，而while语句适用于循环次数未知的场合
+9. 下列程序段不会出现无限循环的是（ C ）。
+(A)   int i=-1;
+ while(1)
+     i++;
+(B)  int i,a;
+ for(i=1;;i++)
+     a+=2;
+(C)  int i=2;
+   while(i==4)
+    i+=2;
+(D)  int i=2;
+   while(i=4)
+    i+=2;
+10. 以下程序段的运行结果是（ D ）。
+int x=3;
+do{
+  printf("%3d", x-=2 );
+}while(!(--x));
+(A)   1    (B)  30   (C)  死循环   (D)   1, -2
+11. 以下程序的运行结果是（ D ）。
+  #include<stdio.h>
+  #include <conio.h>
+  int main( )
+  {
+    int a=1,b=2;
+    switch(a)
+    {
+      case 0:
+        a++;
+        b++;
+      case 1:
+        a+=1;
+        b+=2;
+      case 2:
+        a+=2;
+        b+=3;
+    }
+    printf("%d,%d\n",a,b);
+    getch( );
+    return 0;
+ }
+(A)   1,2   (B)   2,3   (C)   2,4;  (D)   4,7
+12. 以下程序段运行后,x的值为（  D）·
+  int i=1,x=0;
+  while( (++i)<=5)
+  {
+    x+=2;
+  }
+(A)  14  (B)  12  (C)  10   (D)  8 
+13. 以下程序段运行后i的值为（ B ）·
+  int i=3;
+  while(i<10)
+  {
+    if(i==5)
+      break;
+    i=i+2;
+  }
+(A)   3   (B)   5  (C)  12  (D)  11
+14. 以下程序段运行时，语句k+=2; 的执行次数是（ A ）。
+  int i,k=10;
+  for(i=7;i>1;i-=2)
+     k+=2;
+(A)   3   (B)   2   (C)   1   (D)   4
+15. 以下程序段执行后的输出结果是（ D ）。
+    int x=4;
+    {printf("%d ", x-- );
+    }while(!(x-=3));
+(A)  4  -1    (B)  3  0   (C)  死循环   (D)  4  0 
+16. 以下程序运行时，若从键盘输入5，运行结果是（ D ）。
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+ int x;
+ scanf("%d”,&x);
+ if(x-->5)
+    printf("%d\n",x);
+ else 
+    printf("%d",--x);
+ getch();
+ return 0;
+}
+(A)   2    (B)   4    (C)   5   (D)   3
+17. 若已定义int k; 赋值语句k=(k%2==0?1:0); 与（ D ）语句不等价。
+(A)  if (k%2==0) k=1; else k=0;   (B)  if (k%2!=0) k=0; else k=1;
+(C)  if (k%2)  k=0; else k=1;     (D)  if (k%2)  k=1; else k=0;
+18. 以下程序的运行结果是（B  ）。
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int x=1,y=2,z=3,a=4;
+  if(!x)
+    a--;
+  else if(y)
+      ;
+  if(z=0)
+     a=3;
+  else 
+     a=-3;
+  printf("%d",a);
+  getch();
+  return 0;
+}
+(A)   3   (B)  -3  (C)   4  (D)  -4
+19. #include<stdio.h>
+ #include<conio.h>
+ int main()
+ {
+  int n=5;
+  switch(++n)
+  { default: printf("%d ",n++); 
+    case 8:
+    case 7: printf("%d ",n); break;
+    case 6: printf("%d ",n++);
+    case 5: printf("%d ",n);
+  }
+  getch( );
+  return 0;
+ }
+C
+(A)   6   (B)   7   (C)   6   7     (D)   7    7
+20. 以下程序的运行结果是（ A ）
+#include<stdio.h>
+ #include <conio.h>
+ int main( )
+ {
+  int a=3,b=2,c=1;
+  if(a>b)
+    if(a>c)
+      printf("%d",a);
+    else 
+      printf("%d ",b);
+  printf("%d",c);
+  getch( );
+  return 0;
+ }
+(A)  3  1     (B)  2  1    (C)   3   (D)   1
+21. 以下程序的运行结果是（ B ）·
+#include<stdio.h>
+#include <conio.h>
+ int main( )
+ {
+  int a=2,b=3;
+  switch(a--)
+  {
+    case 0:
+      b=b+1;
+      break;
+    case 1:
+      b+=2;
+      break;
+    case 2:
+      b+=3;
+      break;
+  }
+  printf("%d,%d\n",a,b);
+  getch( );
+  return 0;
+}
+(A)   1,5     (B)   1,6    (C)   2,5   (D)   2,6 
+22. 下列程序段中，非死循环的是（ A ）。
+(A)  int i=100;
+ while(1)
+  { i=i%100+1;
+    if(i>=100) break;
+  }
+(B) 
+ int k=0;
+do{
+      ++k;
+ }while(k>=0);
+(C)  int s=10;
+  while(++s%2+s%2) s++;
+(D)   for(;;)
+23. 若已定义int  a; 不会产生死循环的语句是（ C ）。
+(A)   for(a=1; ;a+= 2);
+(B)   for(a=10; ; a--);
+(C)   for( ; a=getchar())!= '\n'; )；
+(D)  while(-1) {a=1;}
+24. 以下程序的运行结果是（ C ）·
+ #include<stdio.h>
+ #include <conio.h>
+ int main()
+ {
+  int i;
+  for(i=0; i<=3; i++)
+     switch(i)
+     {
+      case 0: 
+        printf("%d", ++i);
+        break;
+      case 1:
+        printf("%d",i); 
+      default:
+        printf("%d”,i);
+     }
+  getch( );
+  return 0;
+ }
+(A)  1223   (B)   1    (C)  11123   (D)  123 
+25. 以下程序的运行结果是（  C）·
+ #include<stdio.h>
+ #include <conio.h>
+ int main( )
+ {
+  int s = 0, i = 0;
+  while(i< 8)
+  {  i++;
+    if(i%6==0)
+      break;
+    s+=i;
+  }
+  printf("%d",s);
+  getch( );
+  return 0;
+ }
+(A)   6   (B)  14   (C)  15   (D)  16 
+
+三、数组
+1. 下列对一维数组a的定义中，不正确的是（B）。
+(A)   int  a[5]={0,1,2,3,4};    (B)   int  a[5]={0,1,2,3,4,5};
+(C)   int  a[5]={0,1,2,3};      (D)   int  a[]={0,1,2,3,4,5};
+2. 若已定义：int a[10];对数组a中元素引用正确的是（  A     ）。
+(A)  a[10-5]         (B)  a[9+1]        (C)  a[3-4]        (D)   a(5)
+3. 若已定义：int a[][4]={{1,2,3},{4,5},{6,7,8,9},{10,11},{12}};则数组a第一维大小是（   D   ）。
+(A)  6       (B)  7     (C)  4         (D)  5 
+4. 若已定义：int  a[]={1,2,3,4,5};可用表达式（C）表示数组a的元素个数。
+(A)  sizeof(a[])           (B)  sizeof(int)/sizeof(a) 
+(C)  sizeof(a)/sizeof(int) (D)  sizeof(a)/int 
+5. 下列能正确定义二维数组a的语句是（ D   ）。
+(A)  int a(3,3)={1,2,3,11,12,13,21,22,33};  
+(B)  int a[3,3]={1,2,3,11,12,13,21,22,33};
+(C)  int a[3][]={1,2,3,11,12,13,21,22,33};      
+(D)  int a[3][3]={1,2,3,11,12,13,21,22,33};
+6. 以下程序运行后的输出结果是（  C  ）。
+#include<stdio.h>
+int main(   )
+{		
+int a[3][3]={1,2,3,2,3,4,3,4,5},i,sum=0;
+for(i=0;i<3;i++)
+sum+=a[i][i];
+printf("%d",sum);
+return  0;
+}
+(A)  12      (B)  6    (C)  9      (D)  10
+7. 下列叙述正确的是（   A   ）。
+(A)  C语言基本数据类型中不包含字符串类型;
+(B)  字符串至少由两个以上字符组成;
+(C)  字符串的比较与连接操作只能调用C语言的字符串操作函数实现;
+(D)  C语言用’0’字符作为字符串的结束标志;
+8. 若已定义char s1[20]="Window",s2[10]="List", 执行语句printf("%s",strcat(s1,s2))；后，输出的内容是（   A   ）。
+(A)  WindowList               (B)  Window 
+(C)  List Window              (D)  List 
+9. 以下程序运行后的输出结果是（   B   ）。
+#include<stdio.h>
+int main( )
+{	
+char str[]="Audio Adapter",
+printf("%s",str+7);
+return 0;
+}
+(A) Audio Adapter    (B)  dapter   (C）  Audio    (D)  apter
+10. 设已定义char s[ ]="\"Name\\Address\023\n";，则字符串所占的字节数是（B  ）。
+(A)  19     (B)  16   (C)  18    (D)  14
+11. 若已定义：int a[]={10,12,23,24,35}; 则a[2-1]元素的值为（ B ）
+(A)  10     (B)  12   (C)  23    (D)  24
+12. 以下程序的运行结果是（ B ）。
+  #include<stdio.h>
+  #include<conio.h>
+  int main( )  
+  {
+     int a[5]={1,3,5,8,10},i=1,s=0;
+     while(i<5)
+     {
+       if(a[i]%2!=0)
+          s+=a[i];
+      i++;
+     }
+     printf("%d\n",s);
+     getch( );
+     return 0;
+  }
+(A)   6   (B)   8    (C)   9   (D)  18
+13. 若已定义int a[][4]={1,-2,3,-4,5,-6,7,-8};，则表达式a[0][2]+a[1][1]的值为（B  ）。
+(A)   3   (B)  -3    (C)  10   (D)  -8
+14. 若已定义int a[5][3]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};，无法正确引用数组a元素的是（ C ）。
+(A)   a[0][0]   (B)   a[4][1]   (C)   a[5][1]   (D)   a[3][2]
+15. 以下程序段的运行结果是（ B ）·
+  int a[2][4]={1,2,3,4,5,6,7,8};
+  printf("%d\n",a[1][3]-a[0][2]);
+(A)   2    (B)   5    (C)   4   (D)   3
+16. 无法输出字符串”her"的程序段是（ B ）。
+(A)  char a[ ]={'h','e','r','\0'};
+ puts(a);
+(B)   char a[4]={'h','e',0,'r'};
+ puts(a);
+(C)   char a[ ]={'h','e','r',0};
+ puts(a);
+(D)  char a[4]={'h','e','r','0'-48};
+ puts(a);
+17. 以下程序段的运行结果是（ C ）。
+   char a[]="abcefg",b[]="bmn";
+   int i;
+   for(i=0;i<3;i++)
+      a[i]=b[i];
+   puts(a);
+(A)  bmnabc   (B)  mn   (C)  bmnefg   (D)  abcbmn
+18. 若已定义 char a[30]="Health!",b[10]="Happy!"; 使数组a存储”Health!Happy!"的语句是（ B ）。
+(A)  strcpy(b,a);  (B)  strcat(a,b);
+(C)  strcpy(a,b);  (D)  strcat(b,a);
+19. 若已定义char s[20]="HAPPY!"; 则函数strlen(s)的值是（ B ）。
+(A)  20      (B)   5    (C)   8       (D)  6 
+20. （  B）是正确的数组定义。
+(A)   int n=20,A[n];     
+(B)   int A[10+10];              
+(C)   int N=20; int A[N];
+(D)   int n; scanf("%d",&n); int A[n];
+21. 以下程序段执行后，x[0]的值为（ A ）。
+int x[5]={5,4,3,2,1};
+x[0]=x[1]+x[2]-x[3]-x[4];
+(A)   4    (B)   6    (C)   7   (D)   5
+22. 以下程序的运行结果是（ D ）·
+#include<stdio.h>
+ #include <conio.h>
+ int main( ) 
+ {  char s[10]= "good”,r[10]= "morning",str[20];
+    str=s+r;
+    printf("%s\n",str);
+    getch( );
+    return 0;
+ }
+(A)   good morning   (B)   morning   (C)   good    (D)  编译不通过
+23. 以下程序段的运行结果是（ D ）。
+   int m[]={4,9,10,6,13,5},i=1;
+do
+  { m[i]-=2;
+     }while(m[i++]>4);
+   for(i=0;i<6;i++)
+     printf("%d ",m[i]);
+(A)    2  7   8  4  11  5    (B)    2  7   8  4  13  5
+(C)    4  7   8  4  11  5    (D)    4  7   8  4  13  5
+24. 叙述错误的是（ D ）。
+(A)  定义数组后，数组的大小是固定的，且数组元素的数据类型都相同
+(B)  定义数组并初始化时，可不说明数组长度
+(C)  定义数组后，可通过赋值运算符"="对该数组名直接赋值
+(D)  定义数组时，数组长度的说明不能用变量
+25. 以下程序段的运行结果是（ B ）·
+    int a[]={1,2,3,4},i;
+    for(i=0;i<=3;i+=2)
+    {  
+      a[i]=a[i]*4;
+    }
+    for(i=0;i<4;i++) 
+       printf("%d ",a[i]);
+(A)  4 8 12 16    (B)  4 2 12 4
+(C)  4 8 12 4     (D)  4 2 12 16
+26. 以下程序段的执行结果是（  C）·
+  int a[][3]={1,2,3,4,5,6,7,8,9,10,11,12};
+  printf("%d",a[1][2]);
+(A)   2   (B)   3   (C)   6   (D)   7
+27. 若已定义:int a[3][4];则表达式&a[1][1]-a的值为（  D）。
+(A)   8   (B)   6   (C)   7   (D)   5
+28.  以下程序段执行后sum的值为（ B ）。
+  int k,sum=0;
+  int a[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
+  for(k=0;k<3;k++)
+    sum+=a[k][k];
+(A)   9  (B)  18   (C)  19  (D)  21
+29. 若已定义: char s1[6],s2[6]="hello"; 能将字符串”hello"赋给数组s1的语句是（C  ）。
+(A)  s1=s2;  (B)  strcpy(s2,s1);   (C)  strcpy(s1,s2);   (D)  s1="hello";
+30. 若已定义 char b[20]="Nice to meet you!"; 实现输出字符串"you!"的语句是（ B ）。
+(A)  printf("%s",b);     (B)  printf("%s",b+13);  
+(C)  printf("%c",b+13);  (D)  printf("%c",b[13]); 
+31. 若已定义char str[20]={'a','b','c','\0','?',’\0'}; 执行语句printf("%s",str); 后输出结果是（  B）。
+(A)   abcd    (B)   abc   (C)   ab\0cd  (D)   ab\0cd\0
+32. 以下程序段的执行结果是（B  ）。
+  char s[]="intern\0ation";
+  printf("%d”,strlen(s));
+(A)  4       (B)  6     (C)  8     (D)  13
+33. 若已定义char str1[20]={"Iphone"},str2[20]; （ C ）语句是正确的。
+(A)  str2=str1;        (B)  str2="iPAD";   
+(C)  scanf("%s",str2); (D)  copy(str2=str1);
+
+
+四、函数
+1. 下列叙述错误的是（    B  ）。
+(A) 形式参数属于局部变量;
+(B) 形参可以是常量或表达式;
+(C) 函数不允许嵌套定义，但函数可以嵌套调用;
+(D) 不同函数中的局部变量可以重名;
+2. 函数调用中，若实参为数组，则传递给对应形参的是（  D   ）。
+(A) 0                 (B) 实参数组第一个元素的值;
+(C) 实参数组;         (D) 实参数组的首地址;
+3. 以下程序的运行结果是（   A  ）。
+#include<stdio.h>
+int  fun2( int x)
+{   return 2*x; 
+}
+int  fun1( int a)
+{   return 5+fun2(a+1);
+}
+int main( )
+{  printf( "%d\n",fun1(2) );
+}
+(A) 11  	(B) 7 	(C) 10  	(D) 12
+4. 以下程序的运行结果是（ C    ）。
+#include<stdio.h>
+void  fun( )
+{   static  int  x=1;
+	int  y=0;
+	x++;  y+=2;
+	printf( "%d, %d \n",x,y );
+}
+int main( )
+{   fun( );
+	fun( );
+	return  0;
+}
+(A)  2,2       (B)  2,2  		    (C)  2,2    	  (D)  1,2
+	 4,2 	        2,2                  3,2               2,2
+5. 下列叙述错误的是（C  ）。
+(A)  定义函数时函数名前省略类型符，则默认为int型
+(B)  若函数无返回值，在定义函数时类型符为void
+(C)  定义函数时函数名前省略类型符，则默认为float型 
+(D)  定义函数时必须指明函数名
+6. 下列叙述错误的是（  D）。
+(A)  若要定义静态类变量，在定义变量的类型名前应使用关键字static
+(B)  函数体内定义的变量，若无明确其存储类型，则默认为auto类变量
+(C)  全局变量的作用域是从其定义处起至本程序结束处
+(D)  局部变量的作用域是从其定义处起至本程序结束处
+7. 以下程序的运行结果是（ C ）。
+  #include<stdio.h>
+  #include<conio.h> 
+  int fun(int x)
+  {
+    if(x==1)
+      return 0;
+    else
+      return 2*x;
+  }
+  int main( )
+  { 
+    int i;
+    for(i=1;i<=3;i++)
+       printf("%3d”,fun(i));
+    getch( );
+    return 0;
+  }
+(A)   2  4  6      (B)   0  2  3   (C)   0  4  6      (D)   2  3  6
+8. 函数定义时使用（  A）类型符，则表示该函数无返回值。
+(A)   void    (B)   float   (C)   empty  (D)  double
+9. 以下程序的运行结果是（ A ）。
+  #include<stdio.h>
+  #include<conio.h>
+  int larger(int x,int y)
+  {   
+     return  x>y?x:y;   
+  }
+  int main( )
+  { 
+     int a=3,b=9,c=5,m,n,k;
+     m=larger(a,b);
+     n=larger(a,c);
+     k=larger(larger(a,b),c);
+     printf("%d,%d,%d\n",m,n,k);
+     getch( );
+     return 0;
+  }
+(A)   9,5,9    (B)   5,9,9     (C)   9,9,5    (D)   5,9,5
+10. 以下程序的运行结果是（ C ）。
+ fun3(int x)
+{static int a=3;
+ a+=x;
+ return a;
+}
+main()
+{int k=2,m=1,n;
+ n=fun3(k);
+ n=fun3(m);
+ printf("%d\n",n);
+}
+(A)   3    (B)   4   (C)   6    (D)   9
+11. 以下程序的运行结果是（ A ）。
+  #include<stdio.h>
+  #include <conio.h>
+  void fun(int a[4][4])
+  { int i;
+    for(i=0;i<4;i++)
+      printf("%2d",a[1][i]);
+    printf("\n");
+  }
+  int main()
+  { int a[4][4]={1,1,2,2,1,9,0,0,2,4,0,0,0,5,9,8};
+    fun(a);
+    getch();
+    return 0;
+  }
+(A)   1 9 0 0   (B)   2 0 0 0   (C)   2 0 0 8   (D)   2 0 0 9
+12. 以下程序的运行结果是（ C ）·
+   #include<stdio.h>
+   #include<conio.h>
+   int fun(int a, int b)
+   {
+      return(a*b);
+   }
+   int main()
+   {
+     int x=5,y=3,k;
+     k=fun(x,y);
+     printf("%d×%d=%d\n",x,y,k);
+     getch();
+     return 0;
+   }
+(A)   0   (B)   x×y=15   (C)   5×3=15   (D)   2
+13. 以下程序的运行结果是（A  ）·
+   #include<stdio.h>
+   #include<conio.h>
+   int a=4,b=6,c=5;
+   int fun(int a, int b)
+   {
+     int c;
+     c=a<b?a:b;
+     return(c);
+   }
+   int main()
+   {
+     int a=7;
+     printf("%d",fun(fun(a,b),c));
+     getch();
+     return 0;
+   }
+(A)   5   (B)   6  (C)   0  (D)   4
+14. 若已定义：
+   int fun()
+   {static int m=0;
+    m++;
+    return m;
+   }
+以下程序段的运行结果是（ C ）。
+   int i;
+   for(i=1;i<=2;i++) 
+   fun();
+   printf("%d",fun());
+(A)   0   (B)   1  (C)   3   (D)   2
+15. 从以下调用语句可看出，函数fun()的参数个数为（ A ）·
+fun((a,b),8);
+(A)   2   (B)   3   (C)   1   (D)   8
+
+第二部分 改错题（2小题/套）
+1. 输出100~200之间所有能被3和5同时整除的整数，并统计其个数。
+#include <stdio.h>
+void main()
+{
+  int i,counter=/**/ 1 /**/;
+  for(i=100;i<=200;i++)
+    if( /**/ (i%3)&&(i%5) /**/ )
+    {
+      printf("%-5d",i);
+      counter++;
+    }
+  printf("\ncounter=%d\n",counter);
+  getch();
+}
+2. 求一个正整数所有因子及其和。
+例如：输入12,
+      输出1,2,3,4,6,12
+          sum=28
+#include<stdio.h>
+#include<conio.h>
+int main( )
+{ int a,i,sum;
+  do
+  { printf("Input a positive integer:");
+    scanf("%d",&a);
+  }while(a<=0);
+  /**/ sum=1 /**/;
+  for(i=1;i<=a;i++)
+  if(a%i==0)
+  { printf("%d ",i);
+    sum+=/**/ a /**/;
+  }
+  printf("\nsum=%d\n",sum);
+  getch();
+  return 0;
+}
+第3套题
+1.求某班级人数：若7人一排，则多出4人；9人一排则多出8人；12人一排则多出5人，该班级至少有多少人？
+#include <stdio.h>
+#include <conio.h>
+int main( )
+{ int n=1, flag;
+  flag=/**/   /**/;
+  do
+  { if((n-4)%7==0)
+      if(!((n-8)%9))
+        if(/**/              /**/)
+        { printf("Sum=%d\n",/**/   /**/);
+          flag=0;
+        }
+    n++;
+  }while(flag);
+  getch( );
+  return 0;
+2.函数MultiPrt(int n)功能是根据输入n值(0<n<10)，输出1~n的乘法表。例如，n=3得到
+
+1*1=1 
+2*1=2   2*2=4
+3*1=3   3*2=6  3*3=9
+
+#include <stdio.h>
+#include<conio.h>
+void MultiPrt(int n)
+{  int i,j;
+   for(/**/     /**/; i<=n; i++)
+   { for(j=1; j<=/**/   /**/; j++)
+     printf("%d*%d=%d\t",i,j,/**/     /**/);			
+     printf("\n");
+   }
+}
+int main( )
+{ int n;
+  do
+  { printf("Please input n (0<n<10):");
+    scanf("%d",&n);
+  }while(n<=0||n>9);
+  MultiPrt(n); 
+  getch();
+  return 0;
+}
+第三部分 填空题（2小题/套）
+1.从键盘输入一个直角三角形的两条直角边a和b，计算并输出其周长和面积。将程序填写完整。
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+  double a,b,c,circle,area;
+  printf("Input 2 edges:"); 
+  scanf(/**/     /**/,&a,&b);
+  c=sqrt(/**/      /**/);
+  circle=a+b+c;
+  area=/**/      /**/ ;
+  printf("circle=%lf\n",circle);
+  printf("area=%lf\n",area);
+  getch();  
+}
+2.函数PrintLetters(int n)的功能是:输出n行图形，例如当n=3时图形如下：
+a
+bbb
+ccccc
+将程序填写完整。
+#include <stdio.h>
+void main()
+{
+ int n;
+  /**/     /**/
+  printf("Please input n (n>=1 and n<=10) :");
+  scanf("%d",&n);
+  if( !(n>=1&&n<=10) )  return;
+  PrintLetters(n);
+  getch();
+}
+void PrintLetters(int n)
+{
+  char ch='a';
+  int  row,col;
+  for(row=1;row<=n;row++)
+  {
+    for(col=1;/**/      /**/;col++)
+        putchar(ch);
+    /**/      /**/
+    printf("\n");
+  }
+}
+1.函数calculating(int n)计算并返回表达式（1≤n≤1000）。
+输入：100
+输出：Calculating(100)=0.688172
+将程序填写完整。
+#include <stdio.h>
+void main()
+{
+ float x;
+ int n;
+ double Calculating(int);
+ printf("Please input n (n>=1 and n<=1000):");
+ scanf("%d",&n);
+ printf("Calculating(%d)=%lf\n",n,/**/     /**/);
+ getch();
+}
+
+double Calculating(int n)
+{
+ int  i,sign=1;
+ double r=0.0;
+ if(n>=1&&n<=1000)
+    for( i=1;i<=n;i++)
+    {
+      r+=sign*(1.0/i);
+      /**/     /**/
+    }
+ return /**/      /**/;
+}
+2.  提取字符串中首个数字子串，转为对应的数字，输出其与15的和。（注：数字'0'的ASCII值为48，如无数字子串，输出15）  例如：
+输入：asd123jk456,hg789ok
+输出：123+15=138
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+ char str[100],a[20],*p;
+ int n=0,i,j;
+ int x;
+ printf("Input string:");
+ gets(str);
+ /**/     /**/
+ while(*p!='\0')
+   {
+    for(i=0;*p>='0' && /**/     /**/;p++)
+      {
+       a[i]=*p;
+       i++;
+      }
+    if(i>0)
+      {
+       x=0;
+       for(j=0;j<i;j++)
+           x=x*10+a[j]-/**/    /**/;
+       printf("%d+15=%d\n",x,x+15);
+       n++;
+      }
+    if(n==1)
+      break;
+    else
+      p++;
+   }
+ if(n==0)
+   printf("15\n");
+ getch( );
+}
+1.完成其中的函数fun(x,n)，该函数计算数学表达式的值。例如：fun(2.3,5) = 9.713
+#include <stdio.h>
+#include <math.h>
+double fun(double x,int n)
+{ /**/
+ 
+
+  /**/  
+}
+
+void main()
+{ 
+  printf("fun(2.3,5) = %7.3lf\n", fun(2.3,5));  
+  getch();
+}
+第2套题
+1.完成程序Cprog481.C中的fun()函数，使其计算：
+         
+例如：  输入：1,3		输出：fun(1.000,3.00)=0.182
+        输入：5,-5		输出：fun(5.000,-5.000)=0.023
+        输入：-6,13	输出：fun(-6.000,13.000)=7.000
+#include <stdio.h>
+double fun(float x,float y)
+{ /**/
+  
+  /**/  
+}
+
+void main()
+{ 
+  float x,y;
+  printf("Input x,y: ");
+  scanf("%f,%f",&x,&y);
+  printf("fun(%.3f,%.3f)=%.3lf\n",x,y,fun(x,y));
+  getch();
+}
+
+第3套题
+1.完成函数double fun(float x, int n)，使其计算
+
+如，fun(1.872,7)=21.886246
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+double fun(float x,int n)
+{ /**/
+
+  /**/
+}
+int main()
+{  float x;
+   int n;
+   printf("Input x,n :");
+   scanf("%f,%d",&x,&n);
+   printf("\nfun(%.3f,%2d) = %lf\n",x,n,fun(x,n));
+   getch();
+   return 0;
+}
+
+第4套题
+1.完成函数double fun(float x)，其功能是
+
+如，fun(-3.750)=6.570635
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+double fun(float x)
+{ /**/
+
+
+  /**/
+}
+int main()
+{  float x;
+   printf("Input x :");
+   scanf("%f",&x);
+   printf("\nfun(%.3f) = %lf\n",x,fun(x));
+   getch();
+   return 0;
+}
+ 
